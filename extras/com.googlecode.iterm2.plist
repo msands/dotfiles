@@ -232,7 +232,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/projects/dotfiles</string>
+	<string>~/projects/yadr/extras</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -269,15 +269,15 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>3940 287 445 297 1920 150 2560 1418 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>650 590 620 392 0 0 1920 1178 </string>
+	<string>2890 1210 620 392 1920 442 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>171 183 928 394 0 0 1920 1178 </string>
+	<string>2188 673 796 486 1920 442 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>881 401 970 770 0 0 1920 1178 </string>
+	<string>3493 1070 970 770 1920 442 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>23 401 970 770 0 0 1920 1178 </string>
+	<string>2182 1053 1266 770 1920 442 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>2819 792 970 770 1920 150 2560 1418 </string>
+	<string>2533 1073 970 770 1920 442 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -858,7 +858,7 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>1000</integer>
+			<integer>0</integer>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -911,6 +911,8 @@
 			<string>/Users/msands</string>
 		</dict>
 	</array>
+	<key>NoSyncHaveRequestedFullDiskAccess</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
@@ -957,7 +959,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/msands/projects/dotfiles</string>
+	<string>/Users/msands/projects/yadr/extras</string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -967,9 +969,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-11-16T02:30:36Z</date>
+	<date>2019-02-12T16:03:55Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>SUSkippedVersion</key>
+	<string>3.2.7</string>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
 	<key>TabStyle</key>
@@ -977,6 +981,6 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.2.0</string>
+	<string>3.2.6</string>
 </dict>
 </plist>
