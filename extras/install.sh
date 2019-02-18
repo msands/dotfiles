@@ -8,4 +8,4 @@ if [ ! -h $HOME/.bin ]; then
 fi
 echo "-- Installing ZSH extras..."
 ln -s $HOME/.yadr/extras/zsh.after/update_path.zsh $HOME/.zsh.after/update_path.zsh
-#ln -s $HOME/.yadr/extras/zsh.after/pyenv.zsh $HOME/.zsh.after/pyenv.zsh
+ln -s $HOME/.yadr/extras/zsh.after/pyenv.zsh $HOME/.zsh.after/pyenv.zsh
