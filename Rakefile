@@ -29,6 +29,8 @@ task :install => [:submodule_init, :submodules] do
 
   install_fonts
 
+  install_extras
+
   install_term_theme if RUBY_PLATFORM.downcase.include?("darwin")
 
   run_bundle_config
@@ -185,6 +187,13 @@ def install_fonts
   run %{ cp -f $HOME/.yadr/fonts/* $HOME/Library/Fonts } if RUBY_PLATFORM.downcase.include?("darwin")
   run %{ mkdir -p ~/.fonts && cp ~/.yadr/fonts/* ~/.fonts && fc-cache -vf ~/.fonts } if RUBY_PLATFORM.downcase.include?("linux")
   puts
+end
+
+def install_extras
+  puts "======================================================"
+  puts "Install extras"
+  puts "======================================================"
+  run %{ $HOME/.yadr/extras/install.sh }
 end
 
 def install_term_theme

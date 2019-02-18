@@ -1,0 +1,43 @@
+#!/bin/bash
+
+COMMAND=$1
+SERVER="mcvam.rsglab.com" # Atlanta
+#SERVER="mcvsw.rsglab.com" # Suwanee
+#SERVER="mcvap.rsglab.com" # PCM
+#SERVER="mcvse.rsglab.com" # Seattle
+
+
+OS=`uname`
+
+if [ "${OS}" = "Linux" ]; then
+  NETWORK_IF="wlan0"
+elif [ "${OS}" = "Darwin" ]; then
+  NETWORK_IF="en0"
+fi
+
+if [ "${COMMAND}" = "up" ]; then
+  echo "-- Starting OpenConnect..."
+  sudo openconnect --quiet --config ~/.openconnect/config ${SERVER} --disable-ipv6
+elif [ "${COMMAND}" = "down" ]; then
+  echo "-- Stopping OpenConnect"
+  if [ -f ~/.openconnect/pid ]; then
+    sudo kill -INT `cat ~/.openconnect/pid`
+    sudo rm -rf ~/.openconnect/pid
+    sleep 2
+  fi
+  echo "-- Resetting Wifi Interface..."
+  if [ "${OS}" = "Linux" ]; then
+    systemctl restart NetworkManager
+    sleep 2
+  elif [ "${OS}" = "Darwin" ]; then
+    sudo ifconfig en0 down
+    sleep 10
+    sudo ifconfig en0 up
+    echo "-- Resetting DNS Cache..."
+    flush-dns
+  fi
+elif [ "${COMMAND}" = "status" ]; then
+  ps -ef | grep "[o]penconnect"
+else
+  echo "Usage: $0 up|down|status"
+fi
