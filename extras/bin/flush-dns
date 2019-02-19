@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo killall -HUP mDNSResponder
+say d n s reset
