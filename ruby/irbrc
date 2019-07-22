@@ -1,0 +1,19 @@
+### ruby plugins
+
+### IRB configuration
+IRB.conf[:PROMPT_MODE] = :SIMPLE
+IRB.conf[:AUTO_INDENT_MODE] = false
+
+### Wirble
+# This adds some nice features to the IRB.
+# Coloring is obvious.
+# You can also use ri from teh irb:
+#  >> Object.ri 'Array#map'
+begin
+  require 'wirble'
+
+  Wirble.init
+  Wirble.colorize
+rescue LoadError => err
+  warn "Unable to load Wirble: #{err} (maybe: gem install wirble)"
+end
